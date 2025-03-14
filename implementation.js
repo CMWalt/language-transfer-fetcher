@@ -1,8 +1,8 @@
 async function fetch_github_content({ userSettings }) {
-  const { githubRepo, githubBranch, githubPAT } = userSettings;
+  const { githubRepo, githubBranch } = userSettings;
 
-  if (!githubRepo || !githubBranch || !githubPAT) {
-    return "Error: Missing required settings. Please provide the GitHub repository URL, branch name, and Personal Access Token.";
+  if (!githubRepo || !githubBranch) {
+    return "Error: Missing required settings. Please provide the GitHub repository URL and branch name.";
   }
 
   // Extract owner and repo name from the URL.
@@ -18,7 +18,6 @@ async function fetch_github_content({ userSettings }) {
   try {
     const response = await fetch(apiUrl, {
       headers: {
-        'Authorization': `token ${githubPAT}`,
         'Accept': 'application/vnd.github.v3+json' // Recommended by GitHub API
       }
     });
