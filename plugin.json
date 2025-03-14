@@ -1,51 +1,16 @@
-{
-  "id": "language_transfer_fetcher",
-  "uuid": "GENERATE-A-NEW-UUID",
-  "implementationType": "javascript",
-  "implementationSource": "inline",
-  "manifestVersion": 1,
-  "name": "Language Transfer Fetcher",
-  "version": "0.1.0",
-  "outputType": "text",
-  "title": "Language Transfer Fetcher",
-  "description": "Fetches content from a specified Language Transfer GitHub repository.",
-  "emoji": "🌍",
-  "requiredProperties": ["dummyProperty"],
-  "userSettings": [
-    {
-      "key": "githubRepo",
-      "label": "GitHub Repository URL",
-      "type": "string",
-      "defaultValue": "",
-      "required": true
-    },
-    {
-      "key": "githubBranch",
-      "label": "GitHub Branch Name",
-      "type": "string",
-      "defaultValue": "main",
-      "required": true
-    },
-    {
-      "key": "githubPAT",
-      "label": "GitHub Personal Access Token",
-      "type": "string",
-      "defaultValue": "",
-      "required": true
-    }
-  ],
-  "openaiSpec": {
-    "name": "fetch_github_content",
-    "description": "Fetches and returns content from a specified GitHub repository and branch.",
-    "parameters": {
-      "type": "object",
-      "properties": {
-        "dummyProperty": {
-          "type": "string",
-          "description": "A dummy property to satisfy the model."
-        }
-      },
-      "required": ["dummyProperty"]
-    }
+"userSettings": [
+  {
+    "key": "githubRepo",
+    "label": "GitHub Repository URL",
+    "type": "string",
+    "defaultValue": "",
+    "required": true
+  },
+  {
+    "key": "githubBranch",
+    "label": "GitHub Branch Name",
+    "type": "string",
+    "defaultValue": "main",
+    "required": true
   }
-}
+],
