@@ -1,16 +1,43 @@
-"userSettings": [
-  {
-    "key": "githubRepo",
-    "label": "GitHub Repository URL",
-    "type": "string",
-    "defaultValue": "",
-    "required": true
+{
+  "id": "language_transfer_fetcher",
+  "uuid": "4897466a-9ca5-41cc-a88f-63f76889a1a6",
+  "userSettings": [
+    {
+      "key": "githubRepo",
+      "label": "GitHub Repository URL",
+      "type": "string",
+      "defaultValue": "",
+      "required": true
+    },
+    {
+      "key": "githubBranch",
+      "label": "GitHub Branch Name",
+      "type": "string",
+      "defaultValue": "main",
+      "required": true
+    }
+  ],
+  "emoji": "✨",
+  "title": "Language Transfer Fetcher",
+  "openaiSpec": {
+    "name": "fetch_github_content",
+    "parameters": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "dummyProperty": {
+          "type": "string",
+          "description": "A dummy property to satisfy Gemini."
+        }
+      }
+    },
+    "description": "Fetches content from a Language Transfer GitHub repository."
   },
-  {
-    "key": "githubBranch",
-    "label": "GitHub Branch Name",
-    "type": "string",
-    "defaultValue": "main",
-    "required": true
-  }
-],
+  "httpAction": null,
+  "implementationType": "javascript",
+    "implementationSource": "inline",
+    "manifestVersion": 1,
+    "name": "Language Transfer Fetcher",
+    "version": "1.0.0",
+  "outputType": "text"
+}
